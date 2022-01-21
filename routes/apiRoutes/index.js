@@ -1,6 +1,6 @@
-const { Router } = require("express");
-const { notes } = require('../../db/')
+const router = require('express').Router();
+const notes = require();
+const noteRoute = require('./noteRoute');
 
-router.get('/notes', (req, res) => {
-  let results = notes
-})
+// router to noteRoute
+router.use(noteRoute);
