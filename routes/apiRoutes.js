@@ -8,7 +8,7 @@ router.get('/notes', (req, res) => {
   res.json(savedNotes)
 })
 
-// 
+// nget note id
 router.get('/notes/:id', (req, res) => {
   res.json(savedNotes[req.params.id]);
 })
@@ -33,7 +33,6 @@ router.delete('/notes/:id', (req, res) => {
   fs.writeFileSync('./db/notes.json', JSON.stringify(savedNotes));
   res.json(savedNotes);
   console.log('Note Deleted!');
-
 })
 
 module.exports = router;
